@@ -465,8 +465,6 @@ img {
 }
 
 .enlace--header:hover {
-  font-size: 1.8rem;
-  border-bottom: 2px solid #f06543;
   color: #f06543;
 } 
 
@@ -477,6 +475,7 @@ img {
     z-index: 1000;
     inset: 0 0 0 50%;
     flex-direction: column;
+    align-items: flex-start;
     padding: min(30vh, 10rem) 3rem;
     background-color: #6f9ceb;
     transform: translateX(100%);
@@ -508,7 +507,24 @@ img {
 
 /**------Hero-----**/
 .hero {
-    background-color: #3834f0;
+  background: radial-gradient(circle at bottom right, #70f8ba, #3834f0, #f06543);
+  background-size: 400% 400%;
+  animation: gradient 10s ease-out infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero__contenido {
@@ -533,16 +549,6 @@ img {
     line-height: 1.8;
 }
 
-.hero__banda {
-    padding: 25px 0;
-}
-.hero__banda--fuente {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1rem;
-    color: #6f9ceb;
-    text-align: center;
-}
 @media (max-width: 768px) {
     .hero__contenido {
         display: block;
@@ -586,7 +592,6 @@ img {
 .galeria__articulo {
     display: flex;
     align-items: flex-end;
-    gap: 30px;
     padding: 30px 0;
 }
 
@@ -594,9 +599,8 @@ img {
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
-  gap: 30px;
   padding: 30px 0;
-}
+}        
 
 .galeria__imagen {
     width: 680px;
@@ -606,6 +610,16 @@ img {
 .galeria__contenido {
     background-color: #3834f0;
     padding: 15px;
+    transform: translateX(0);
+    transition: .4s ease-out;
+}
+.galeria__contenido:hover {
+  transform: scale(1.2);
+  transform: translateX(-20%);
+}
+.galeria__articulo--reverse .galeria__contenido:hover {
+  transform: scale(1.2);
+  transform: translateX(20%);
 }
 
 .galeria__titulo {
@@ -618,6 +632,7 @@ img {
     font-size: 1.6rem;
     color: #6f9ceb;
 }
+
 
 @media (max-width: 900px) {
     .galeria__articulo, .galeria__articulo--reverse {
@@ -691,8 +706,6 @@ img {
 
 .footer__datos:hover {
     color: #f06543;
-    border-bottom: 2px solid #f06543;
-    font-size: 1.8rem;
 }
 
 
@@ -711,7 +724,7 @@ img {
 
 /**------Proyectos-------**/
 .proyectos__titulo {
-    padding-top: 45px;
+    padding-top: 90px;
 }
 
 .proyectos__titulo .texto {
