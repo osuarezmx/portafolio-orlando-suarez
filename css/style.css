@@ -362,7 +362,18 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
+/*Utilidades*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
 /**-----Globales-----**/
 .contenedor {
     max-width: 1440px;
@@ -610,22 +621,21 @@ img {
 .galeria__contenido {
     background-color: #3834f0;
     padding: 15px;
-    transform: translateX(0);
+    transform: translateY(0);
     transition: .4s ease-out;
 }
-.galeria__contenido:hover {
-  transform: scale(1.2);
-  transform: translateX(-20%);
-}
-.galeria__articulo--reverse .galeria__contenido:hover {
-  transform: scale(1.2);
-  transform: translateX(20%);
+.galeria__contenido:hover, .galeria__articulo--reverse .galeria__contenido:hover {
+  transform: translateY(-20%);
 }
 
 .galeria__titulo {
     font-size: 2.5rem;
     color: #fff;
     padding-bottom: 15px;
+    transition: .3s ease-out;
+}
+.galeria__contenido:hover .galeria__titulo {
+  color: #f06543;
 }
 
 .galeria__categoria {
@@ -695,6 +705,8 @@ img {
 .footer__redes {
   display: flex;
   gap: 15px;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer__datos {
@@ -707,9 +719,9 @@ img {
 .footer__datos:hover {
     color: #f06543;
 }
-
-
-
+.footer__contacto .footer__datos-sh {
+  color: #fff;
+}
 @media (max-width:768px) {
     .footer__columnas {
       grid-template-columns: 1fr;
@@ -771,6 +783,9 @@ img {
   .campo__field--textarea {
     height: 6em;
   }
+  .formulario__campo-block {
+    display: inline-block;
+  }
   .formulario__btn {
     background-color: #3834f0;
     color: #fff;
@@ -784,7 +799,7 @@ img {
   .formulario__btn:hover {
     background-color: #f06543;
   }
-
+  
   @media (max-width: 768px) {
     .formulario {
         padding: 45px 0;

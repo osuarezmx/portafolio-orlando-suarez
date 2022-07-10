@@ -15,26 +15,29 @@
     </head>
     <body>
     
-            <header class="header">
-                <div class="contenedor">
-                    <div class="navegacion">
-                            <a href="../index.html" class="navegacion__logo">orlando suárez</a>
-                        <nav>
-                            <ul class="navegacion__menu">
-                                <li class="menu__enlace">
-                                    <a href="../index.html" class="enlace enlace--header enlace--oscuro">inicio</a>
-                                </li>
-                                <li class="menu__enlace">
-                                    <a href="#" class="enlace enlace--header enlace--oscuro">proyectos</a>
-                                </li>
-                                <li class="menu__enlace">
-                                    <a href="./contacto.html" class="enlace enlace--header enlace--oscuro">contacto</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+        <header class="header">
+            <div class="contenedor">
+                <div class="navegacion">
+                        <a href="../index.html" class="navegacion__logo">orlando suárez</a>
+                        <button class="menu-movil" aria-controls="menu" aria-expanded="false">
+                            <span class="sr-only">Menu</span>
+                        </button>
+                    <nav class="navegacion__menu">
+                        <ul id="menu" data-visible="false" class="menu">
+                            <li class="menu__enlace">
+                                <a href="../index.html" class="enlace enlace--header">inicio</a>
+                            </li>
+                            <li class="menu__enlace">
+                                <a href="#" class="enlace enlace--header">proyectos</a>
+                            </li>
+                            <li class="menu__enlace">
+                                <a href="../pages/contacto.html" class="enlace enlace--header">contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </header>
+            </div>
+        </header>
 
             <main>
                 <section class="proyectos">
@@ -96,6 +99,8 @@
                     </div>
                 </div>
             </footer>
+
+            <script src="../js/script.js"></script>
     
     </body>
     </html>
