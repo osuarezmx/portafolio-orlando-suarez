@@ -1,0 +1,22 @@
+{
+  "name": "portafolio-orlando-suarez",
+  "version": "1.0.0",
+  "description": "Proyecto Potafolio Orlando Suarez",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --include-path sass sass/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osuarezmx/portafolio-orlando-suarez.git"
+  },
+  "author": "Orlando Suarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osuarezmx/portafolio-orlando-suarez/issues"
+  },
+  "homepage": "https://github.com/osuarezmx/portafolio-orlando-suarez#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
