@@ -38,6 +38,11 @@ img {
         color: $colorSecundario;
     }
 }
+@media (max-width:768px) {
+    .enlace--header:hover {
+        color: $colorTerciario;
+    }
+}
 .heading {
     font-family: $fuenteHeading;
     font-weight: 700;
